@@ -10,7 +10,8 @@ public class TimeHandlerScript : MonoBehaviour
     private float currentTime;
     public Text lapsText;
     private int lapCounter;
-    public Text lapTimeText;    
+    public Text lapTimeText;
+    public Text lastLapTime;
 
     // Start is called before the first frame update
     void Start()
