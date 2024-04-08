@@ -4,7 +4,7 @@ using UnityEngine;
 using System;
 using Random = System.Random;
 
-public class LoopsScriot : MonoBehaviour
+public class ArrayScript : MonoBehaviour
 {
     
     void Start()
