@@ -1,7 +1,10 @@
 using System.Collections;
 using System.Collections.Generic;
+using Unity.VisualScripting;
 using UnityEngine;
+using UnityEngine.PlayerLoop;
 using UnityEngine.UI;
+using UnityEngine.UIElements;
 
 public class TimeHandlerScript : MonoBehaviour
 {
@@ -11,28 +14,49 @@ public class TimeHandlerScript : MonoBehaviour
     public Text lapsText;
     private int lapCounter;
     public Text lapTimeText;
-    public Text lastLapTime;
+    private float lastLapTime;
+    public Text prevLapTime;
+    private float prevLapTimeValue;
+    private bool flag;
 
-    // Start is called before the first frame update
+    
     void Start()
     {
-     
+        flag = false;     
+    }
+    public void StartButtonClick()
+    {        
+        flag = true;        
     }
 
-    // Update is called once per frame
     void Update()
     {
-
-        currentTime = Mathf.Round(Time.time);
-        //lapsText.text = Mathf.Round((currentTime - 4) / 10).ToString();
-        timerText.text= currentTime.ToString();
+        if (flag == true)
+        {             
+            currentTime = Mathf.Round(Time.time);
+            timerText.text = currentTime.ToString();
+        }
     }
 
-    public void LapsFinishBurrontClick()
+    public void LapsFinishBttonClick()
     {
-        ++lapCounter;
-        lapsText.text = lapCounter.ToString();
-        lapTimeText.text = Mathf.Round(currentTime).ToString();
-
+        CalculateRaceData();
+        DisplayRaceData();
     }
+
+    private void CalculateRaceData()
+    {
+        prevLapTimeValue = lastLapTime;
+        lastLapTime =  currentTime;        
+        ++lapCounter;        
+    }
+
+    private void DisplayRaceData()
+    {
+        prevLapTime.text = prevLapTimeValue.ToString();
+        lapsText.text = lapCounter.ToString();
+        lapTimeText.text = lastLapTime.ToString();
+    }
+
+    
 }

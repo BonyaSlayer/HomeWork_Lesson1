@@ -208,7 +208,7 @@ MonoBehaviour:
       m_Calls:
       - m_Target: {fileID: 451448140}
         m_TargetAssemblyTypeName: TimeHandlerScript, Assembly-CSharp
-        m_MethodName: LapsFinishBurrontClick
+        m_MethodName: StartButtonClick
         m_Mode: 1
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
@@ -360,7 +360,7 @@ GameObject:
   - component: {fileID: 192104088}
   - component: {fileID: 192104087}
   m_Layer: 5
-  m_Name: LapTimePanel
+  m_Name: LastLapTimePanel
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -495,7 +495,7 @@ MonoBehaviour:
     m_HorizontalOverflow: 0
     m_VerticalOverflow: 0
     m_LineSpacing: 1
-  m_Text: Lap Check
+  m_Text: Finish Lap
 --- !u!222 &212182431
 CanvasRenderer:
   m_ObjectHideFlags: 0
@@ -535,8 +535,8 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   timerText: {fileID: 654086127}
   lapsText: {fileID: 1063387528}
-  lapTimeText: {fileID: 850236493}
-  lastLapTime: {fileID: 0}
+  lapTimeText: {fileID: 1719416018}
+  lastLapTime: {fileID: 850236493}
 --- !u!4 &451448141
 Transform:
   m_ObjectHideFlags: 0
@@ -958,7 +958,7 @@ GameObject:
   - component: {fileID: 850236494}
   - component: {fileID: 850236493}
   m_Layer: 5
-  m_Name: LapTimeText (Legacy)
+  m_Name: LastLapTimeText (Legacy)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -1595,7 +1595,7 @@ MonoBehaviour:
     m_HorizontalOverflow: 0
     m_VerticalOverflow: 0
     m_LineSpacing: 1
-  m_Text: 'LapTime:'
+  m_Text: 'Current LapTime:'
 --- !u!222 &1828723342
 CanvasRenderer:
   m_ObjectHideFlags: 0
@@ -1674,7 +1674,7 @@ MonoBehaviour:
     m_HorizontalOverflow: 0
     m_VerticalOverflow: 0
     m_LineSpacing: 1
-  m_Text: 'LastLapTime:'
+  m_Text: 'Last LapTime:'
 --- !u!222 &1936049565
 CanvasRenderer:
   m_ObjectHideFlags: 0
@@ -1768,7 +1768,7 @@ MonoBehaviour:
       m_Calls:
       - m_Target: {fileID: 451448140}
         m_TargetAssemblyTypeName: TimeHandlerScript, Assembly-CSharp
-        m_MethodName: LapsFinishBurrontClick
+        m_MethodName: LapsFinishBttonClick
         m_Mode: 1
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
