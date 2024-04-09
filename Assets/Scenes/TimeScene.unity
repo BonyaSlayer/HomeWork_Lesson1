@@ -360,7 +360,7 @@ GameObject:
   - component: {fileID: 192104088}
   - component: {fileID: 192104087}
   m_Layer: 5
-  m_Name: LastLapTimePanel
+  m_Name: PrevLapTimePanel
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -536,7 +536,7 @@ MonoBehaviour:
   timerText: {fileID: 654086127}
   lapsText: {fileID: 1063387528}
   lapTimeText: {fileID: 1719416018}
-  lastLapTime: {fileID: 850236493}
+  prevLapTime: {fileID: 850236493}
 --- !u!4 &451448141
 Transform:
   m_ObjectHideFlags: 0
@@ -958,7 +958,7 @@ GameObject:
   - component: {fileID: 850236494}
   - component: {fileID: 850236493}
   m_Layer: 5
-  m_Name: LastLapTimeText (Legacy)
+  m_Name: PrevLapTimeText (Legacy)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -1595,7 +1595,7 @@ MonoBehaviour:
     m_HorizontalOverflow: 0
     m_VerticalOverflow: 0
     m_LineSpacing: 1
-  m_Text: 'Current LapTime:'
+  m_Text: 'Last LapTime:'
 --- !u!222 &1828723342
 CanvasRenderer:
   m_ObjectHideFlags: 0
@@ -1674,7 +1674,7 @@ MonoBehaviour:
     m_HorizontalOverflow: 0
     m_VerticalOverflow: 0
     m_LineSpacing: 1
-  m_Text: 'Last LapTime:'
+  m_Text: ' Previous LapTime:'
 --- !u!222 &1936049565
 CanvasRenderer:
   m_ObjectHideFlags: 0
